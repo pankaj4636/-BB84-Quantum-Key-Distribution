@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+*.egg-info/
+dist/
+.dist/
+build/
+.pytest_cache/
+.hypothesis/
+.env
+
+# Node
+node_modules/
+dist/
+.env
+.env.local
+*.log
+coverage/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE & Tooling
+.vscode/
+.idea/
+*.swp
+graphify-out/
