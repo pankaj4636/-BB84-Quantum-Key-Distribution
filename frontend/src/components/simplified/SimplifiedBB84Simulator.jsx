@@ -45,8 +45,14 @@ export default function SimplifiedBB84Simulator() {
   const [otpMessage, setOtpMessage] = useState('BB84')
 
   const handleRunSimulation = async () => {
+    setTablePage(0)
     setRunCount((c) => c + 1)
     await runSimulation()
+  }
+
+  const handleResetSimulation = () => {
+    setTablePage(0)
+    resetSimulation()
   }
 
   // Current parameters
@@ -541,7 +547,7 @@ export default function SimplifiedBB84Simulator() {
           </button>
 
           <button
-            onClick={resetSimulation}
+            onClick={handleResetSimulation}
             disabled={isLoading}
             className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm border border-[var(--q-border)] bg-[var(--q-surface-2)] hover:bg-[var(--q-surface-active)] text-[var(--q-text-2)] hover:text-[var(--q-text-1)] transition-colors cursor-pointer"
           >
